@@ -1,4 +1,6 @@
-@charset "UTF-8";
+@import url(/index.html);
+@import url(../pages/productos.html);
+@import url(../pages/nosotros.html);
 * {
   margin: 0;
   padding: 0;
@@ -111,7 +113,7 @@ footer {
 
 .formu {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
@@ -151,6 +153,26 @@ footer {
   justify-content: space-between;
 }
 
+@media (max-width: 480px) {
+  .produc {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .caja {
+    padding: 10px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .produc {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .caja {
+    padding: 15px;
+    margin-top: 10px;
+  }
+}
 .conta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,25 +189,38 @@ footer {
 
 .tex {
   grid-area: tex;
-  background-color: aliceblue;
-  border-bottom: #000;
 }
 
 .img2 {
   grid-area: img2;
-  background-color: #ccc;
-  padding: 20px;
-  border-bottom: #000;
 }
-
-.tex2 {
+.img2 .tex2 {
   grid-area: tex2;
 }
-
-.img3 {
+.img2 .img3 {
   grid-area: img3;
 }
-
-.tex3 {
+.img2 .tex3 {
   grid-area: tex3;
+}
+@media (max-width: 480px) {
+  .img2 .conta {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-auto-flow: row;
+    place-items: center;
+    grid-template-areas: "img" "tex" "img2" "tex2" "img3";
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .conta {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-auto-flow: row;
+    place-items: center;
+    grid-template-areas: "img" "tex" "img2" "tex2" "img3" "tex3";
+  }
 }/*# sourceMappingURL=style.css.map */

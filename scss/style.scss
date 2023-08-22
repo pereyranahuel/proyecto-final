@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 $color-principal: rgb(193, 216, 247);
+@import url(/index.html);
 body {
     background-color: $color-principal;
     padding: 10;
@@ -100,7 +101,7 @@ footer {
 }
 .formu {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
+    grid-template-columns: 1fr 1fr; 
     gap: 12px;
 }
 .con-info {
@@ -117,6 +118,7 @@ footer {
     font-size: 20px;
     background-color: rgb(167, 214, 245);
 }
+@import url(../pages/productos.html);
 .produc {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -135,6 +137,29 @@ footer {
     margin-top: 10px;
     justify-content: space-between;
 }
+@media (max-width: 480px) {
+    .produc {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .caja {
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+    .produc {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .caja {
+        padding: 15px;
+        margin-top: 10px;
+    }
+}
+@import url(../pages/nosotros.html);
 .conta {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -154,18 +179,13 @@ footer {
 
 .tex {
     grid-area: tex;
-    background-color: aliceblue;
-    border-bottom: #000;
     
     
 }
 
 .img2 {
     grid-area: img2;
-    background-color: #ccc;
-    padding: 20px;
-    border-bottom: #000;
-}
+    
 
 .tex2 {
     grid-area: tex2;
@@ -178,3 +198,41 @@ footer {
 .tex3 {
     grid-area: tex3;
 }
+@media (max-width: 480px) {
+    .conta {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        grid-auto-flow: row;
+        place-items: center;
+        grid-template-areas:
+            "img"
+            "tex"
+            "img2"
+            "tex2"
+            "img3"
+           }}  
+    }
+    @media (min-width: 481px) and (max-width: 1024px) {
+        .conta {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            grid-auto-flow: row;
+            place-items: center;
+            grid-template-areas:
+                "img"
+                "tex"
+                "img2"
+                "tex2"
+                "img3"
+                "tex3";
+        }
+    }
+    @media (min-width: 1025px) {
+    }
+   
+    
+    
+    
+    
