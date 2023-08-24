@@ -1,0 +1,19 @@
+.formu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.con-info {
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    background-color: rgb(167, 214, 245);
+}
+.form {
+    background-color: aliceblue;
+    border-bottom: #000;
+}
+.cont {
+    font-size: 20px;
+    background-color: rgb(167, 214, 245);
+}

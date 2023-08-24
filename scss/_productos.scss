@@ -1,0 +1,29 @@
+.produc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.caja {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+@media (max-width: 480px) {
+    .produc {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .caja {
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
