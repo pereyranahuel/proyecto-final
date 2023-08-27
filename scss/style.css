@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +9,7 @@ body {
   background-color: rgb(193, 216, 247);
   padding: 10;
   margin: 1%;
-}
-
-.display-flex {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .logo-title {
@@ -22,7 +19,17 @@ body {
 .logo-title h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 50px;
-  margin: 10px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .logo-title h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo-title h1 {
+    font-size: 30px;
+  }
 }
 .logo-title h2 {
   font-family: "Roboto", Arial, sans-serif;
@@ -30,12 +37,37 @@ body {
   margin-top: 20px;
   margin: 5px;
 }
+@media screen and (max-width: 768px) {
+  .logo-title h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo-title h2 {
+    font-size: 15px;
+  }
+}
 
 .logo {
   width: 100px;
   height: auto;
   margin-right: 15px;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 80px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 60px;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
 }
 
 .filanav h1 {
@@ -53,18 +85,28 @@ body {
   margin-bottom: 10px;
 }
 
-main .section1 {
-  margin-top: 10px;
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main .intro-index {
   font-size: 20px;
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .contenedor {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tex-car {
@@ -90,122 +132,35 @@ footer {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: #000;
-  background-color: rgb(150, 250, 250);
+  background-color: rgb(136, 167, 250);
+  text-decoration: none;
+  margin-top: 10px;
 }
-
-.redes-sociales {
+footer .redes-sociales {
   margin-right: 10px;
+  text-decoration: none;
 }
-.redes-sociales img {
+footer .redes-sociales img {
   margin-right: 50px;
 }
-
-#pie a {
-  text-decoration: none;
+footer .foot {
+  margin-top: 10px;
+}
+footer #pie a {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   margin: 10px;
+  text-decoration: none;
   color: black;
 }
 
-body {
-  background-color: rgb(193, 216, 247);
-  padding: 10px;
-  margin: 1%;
-}
-
-.display-flex {
-  display: flex;
-  align-items: center;
-}
-
-.logo-title {
-  display: flex;
-  align-items: center;
-}
-.logo-title h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 50px;
-  margin: 10px;
-}
-.logo-title h2 {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 30px;
-  margin-top: 20px;
-  margin: 5px;
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-  margin-right: 15px;
-  margin-bottom: 5px;
-}
-
-.filanav h1 {
-  text-align: center;
-}
-.filanav h2 {
-  text-align: center;
-  border-bottom: none;
-}
-
-.colornav {
-  background-color: rgb(168, 191, 248);
-  margin: 5px 5px 10px;
-}
-
-main .section1 {
+.intro-cont {
   font-size: 20px;
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.tex-car {
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-}
-
-.section3 {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 25px;
-}
-
-.section4 {
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-}
-
-footer {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 1px solid #000;
-  background-color: rgb(150, 250, 250);
-}
-
-.redes-sociales {
-  margin-right: 10px;
-}
-.redes-sociales img {
-  margin-right: 50px;
-}
-
-#pie a {
-  text-decoration: none;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 30px;
-  margin: 10px;
+  font-weight: 400;
   color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .formu {
@@ -213,51 +168,81 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+@media (max-width: 780px) {
+  .formu {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+}
 
 .con-info {
   display: grid;
   place-items: center;
   font-size: 20px;
   background-color: rgb(167, 214, 245);
+  padding: 1rem;
 }
 
 .form {
-  background-color: aliceblue;
+  background-color: rgb(116, 179, 235);
   border-bottom: #000;
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.colorboton {
+  background-color: rgb(161, 238, 233);
+}
+
+.colorboton:hover {
+  background-color: rgb(247, 247, 249);
+  text-decoration-color: black;
 }
 
 .cont {
   font-size: 20px;
-  background-color: rgb(167, 214, 245);
+  background-color: rgb(166, 166, 246);
+  margin-top: 1rem;
 }
 
-.formu {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.con-info {
-  display: grid;
-  place-items: center;
+.intro-pro {
   font-size: 20px;
-  background-color: rgb(167, 214, 245);
-}
-
-.form {
-  background-color: aliceblue;
-  border-bottom: 1px solid #000;
-}
-
-.cont {
-  font-size: 20px;
-  background-color: rgb(167, 214, 245);
+  font-weight: 400;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .produc {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
+  grid-auto-flow: row;
+  place-items: center;
+}
+@media (max-width: 780px) {
+  .produc {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .produc {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1px;
+  }
+}
+
+.caja img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .caja {
@@ -269,27 +254,48 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   justify-content: space-between;
+  margin-top: 10px;
 }
-
 @media (max-width: 480px) {
-  .produc {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
   .caja {
     padding: 10px;
     margin-top: 5px;
   }
 }
-.produc {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+
+.intro-nos {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-.caja {
+.conta {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  grid-auto-flow: row;
+  place-items: center;
+}
+@media (max-width: 780px) {
+  .conta {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .conta {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+}
+
+.conta {
   background-color: #ccc;
   padding: 20px;
   border: 1px solid #333;
@@ -298,135 +304,55 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   justify-content: space-between;
+  margin-top: 10px;
 }
-
 @media (max-width: 480px) {
-  .produc {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .caja {
+  .conta {
     padding: 10px;
     margin-top: 5px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
-  .produc {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .caja {
-    padding: 15px;
-    margin-top: 10px;
-  }
+
+.info-tex {
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
 }
-.conta {
+
+.intro-info {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.cont-info {
+  background-color: #ccc;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  place-items: center;
-  grid-template-areas: "img tex" "tex2 img2" "img3 tex3";
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 10px;
 }
-
-.img {
-  grid-area: img;
-}
-
-.tex {
-  grid-area: tex;
-}
-
-.img2 {
-  grid-area: img2;
-}
-
-.tex2 {
-  grid-area: tex2;
-}
-
-.img3 {
-  grid-area: img3;
-}
-
-.tex3 {
-  grid-area: tex3;
-}
-
-@media (max-width: 480px) {
-  .conta {
+@media (max-width: 768px) {
+  .cont-info {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    grid-auto-flow: row;
-    place-items: center;
-    grid-template-areas: "img" "tex" "img2" "tex2" "img3";
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
-  .conta {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    grid-auto-flow: row;
-    place-items: center;
-    grid-template-areas: "img" "tex" "img2" "tex2" "img3" "tex3";
-  }
-}
-.conta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  place-items: center;
-  grid-template-areas: "img tex" "tex2 img2" "img3 tex3";
+
+.cont-info img {
+  max-width: 100%;
+  height: auto;
 }
 
-.img {
-  grid-area: img;
-}
-
-.tex {
-  grid-area: tex;
-}
-
-.img2 {
-  grid-area: img2;
-}
-
-.tex2 {
-  grid-area: tex2;
-}
-
-.img3 {
-  grid-area: img3;
-}
-
-.tex3 {
-  grid-area: tex3;
-}
-
-@media (max-width: 480px) {
-  .conta {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    grid-auto-flow: row;
-    place-items: center;
-    grid-template-areas: "img" "tex" "img2" "tex2" "img3";
-  }
-}
-@media (min-width: 481px) and (max-width: 1024px) {
-  .conta {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    grid-auto-flow: row;
-    place-items: center;
-    grid-template-areas: "img" "tex" "img2" "tex2" "img3" "tex3";
-  }
-}/*# sourceMappingURL=style.css.map */
+/* Ajustar estilos adicionales según tus preferencias *//*# sourceMappingURL=style.css.map */

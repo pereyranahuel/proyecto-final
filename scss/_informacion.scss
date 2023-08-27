@@ -1,0 +1,36 @@
+.info-tex{
+    font-family: $font-family;
+    font-size:15px ;
+   
+    
+}
+.intro-info{
+    @include subtitulo (black, 2px solid black, 5px);
+    margin-top: 5px;
+}
+.cont-info {
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10px; 
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cont-info img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustar estilos adicionales según tus preferencias */

@@ -2,32 +2,63 @@ body {
     background-color: $color-principal;
     padding: 10;
     margin: 1%;
+    flex-direction: column;
 }
-.display-flex {
-    display: flex;
-    align-items: center;
-}
+
 .logo-title {
     h1 {
         font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
         font-size: 50px;
-        margin: 10px;
+        margin: 0;
+
+        @media screen and (max-width: 768px) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 30px;
+        }
     }
+
     h2 {
         font-family: "Roboto", Arial, sans-serif;
         font-size: 30px;
         margin-top: 20px;
         margin: 5px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 15px;
+        }
     }
+
     display: flex;
     align-items: center;
 }
+
 .logo {
     width: 100px;
     height: auto;
     margin-right: 15px;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+        width: 80px;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 60px;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
 }
+
 .filanav {
     h1 {
         text-align: center;
@@ -44,18 +75,24 @@ body {
     margin-left: 5px;
     margin-bottom: 10px;
 }
-main .section1 {
-    margin-top: 10px;
-    font-size: 20px;
-    border: 1px solid #000;
-    padding: 10px;
-    margin: 10px;
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    .intro-index {
+        @include subtitulo(black, 2px solid black, 5px);
+        margin-top: 10px;
+    }
 }
 .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
+
 .tex-car {
     display: grid;
     place-items: center;
@@ -64,7 +101,7 @@ main .section1 {
 .section3 {
     text-align: center;
     margin-top: 25px;
-    font-size: 25px;
+    font-size: $font-size-heading;
 }
 .section4 {
     margin-top: 15px;
@@ -77,18 +114,24 @@ footer {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     border-bottom: #000;
-    background-color: rgb(150, 250, 250);
-}
-.redes-sociales {
-    margin-right: 10px;
-    img {
-        margin-right: 50px;
-    }
-}
-#pie a {
+    background-color: rgb(136, 167, 250);
     text-decoration: none;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 30px;
-    margin: 10px;
-    color: black;
+    margin-top: 10px;
+    .redes-sociales {
+        margin-right: $margin-small;
+        text-decoration: none;
+        img {
+            margin-right: 50px;
+        }
+    }
+    .foot {
+        margin-top: 10px;
+    }
+    #pie a {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 30px;
+        margin: $margin-small;
+        text-decoration: none;
+        color: black;
+    }
 }
