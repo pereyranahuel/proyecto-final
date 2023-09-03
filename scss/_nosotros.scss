@@ -2,41 +2,52 @@
     @include subtitulo (black, 2px solid black, 5px);
  margin-top: 5px;
  }
- .conta {
-    display: grid;
-    grid-template-columns: min-content min-content;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    grid-auto-flow: row;
-    place-items: center;
-
-    @media (max-width: 780px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 5px;
-    }
-
-    @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-        gap: 1px;
-    }
-}
-
-.conta{
-
+ .caja-nos1{
     background-color: #ccc;
     padding: 20px;
     border: 1px solid #333;
     border-radius: 10px;
     box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-top: 10px;
-
-    @media (max-width: 480px) {
-        padding: 10px;
-        margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center; 
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 10px;
+    gap: 2rem; 
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
     }
+}
+.caja-nos1 img{
+    max-width: 100%;
+    height: auto;
+}
+.caja-nos2{
+    background-color: #ccc;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 10px;
+    gap: 2rem; 
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+.caja-nos2 img{
+    max-width: 100%;
+    height: auto;
+}
+.tex-nos{
+    font-size: 20px;
 }

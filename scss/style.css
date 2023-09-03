@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(193, 216, 247);
+  background-color: #F5F5F5;
   padding: 10;
   margin: 1%;
   flex-direction: column;
@@ -78,6 +77,14 @@ body {
   border-bottom: 0cap;
 }
 
+.navbar-toggler-icon {
+  border-bottom: none;
+}
+
+.navbar-nav {
+  text-align: right;
+}
+
 .colornav {
   background-color: rgb(168, 191, 248);
   margin-top: 5px;
@@ -109,6 +116,14 @@ main .intro-index {
   }
 }
 
+.carousel-control-prev-icon {
+  background-color: black;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+}
+
 .tex-car {
   display: grid;
   place-items: center;
@@ -131,27 +146,73 @@ main .intro-index {
 footer {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: #000;
-  background-color: rgb(136, 167, 250);
+  font-size: 20px;
+  background-color: rgb(168, 191, 248);
   text-decoration: none;
   margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-footer .redes-sociales {
-  margin-right: 10px;
-  text-decoration: none;
-}
-footer .redes-sociales img {
-  margin-right: 50px;
-}
-footer .foot {
+
+.redes-sociales {
   margin-top: 10px;
 }
-footer #pie a {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 30px;
-  margin: 10px;
+
+.redes-logo {
+  display: inline-block;
+  position: relative;
+  margin-right: 45px;
+  text-decoration: none;
+}
+.redes-logo span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.redes-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.redes-logo:hover span {
+  opacity: 1;
+}
+
+#pie {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  padding: 10px;
+}
+
+#pie a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
+}
+
+#pie a:hover {
+  text-decoration: none;
+  border: 1px solid #000;
+  color: white;
+  background-color: #000;
 }
 
 .intro-cont {
@@ -182,6 +243,15 @@ footer #pie a {
   font-size: 20px;
   background-color: rgb(167, 214, 245);
   padding: 1rem;
+}
+
+.titul {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 
 .form {
@@ -264,6 +334,14 @@ footer #pie a {
   }
 }
 
+.titulo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
 .intro-nos {
   font-size: 20px;
   font-weight: 400;
@@ -273,45 +351,62 @@ footer #pie a {
   margin-top: 5px;
 }
 
-.conta {
-  display: grid;
-  grid-template-columns: min-content min-content;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-  grid-auto-flow: row;
-  place-items: center;
-}
-@media (max-width: 780px) {
-  .conta {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 5px;
-  }
-}
-@media (max-width: 480px) {
-  .conta {
-    grid-template-columns: 1fr;
-    gap: 1px;
-  }
-}
-
-.conta {
+.caja-nos1 {
   background-color: #ccc;
   padding: 20px;
   border: 1px solid #333;
   border-radius: 10px;
   box-sizing: border-box;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  margin: 10px;
+  gap: 2rem;
 }
-@media (max-width: 480px) {
-  .conta {
-    padding: 10px;
-    margin-top: 5px;
+@media (max-width: 768px) {
+  .caja-nos1 {
+    grid-template-columns: 1fr;
   }
+}
+
+.caja-nos1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.caja-nos2 {
+  background-color: #ccc;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  margin: 10px;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .caja-nos2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.caja-nos2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tex-nos {
+  font-size: 20px;
 }
 
 .info-tex {
@@ -336,13 +431,13 @@ footer #pie a {
   box-sizing: border-box;
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   text-align: center;
   padding: 20px;
   max-width: 100%;
   margin: 0 auto;
-  gap: 10px;
+  gap: 5rem;
 }
 @media (max-width: 768px) {
   .cont-info {
@@ -355,4 +450,20 @@ footer #pie a {
   height: auto;
 }
 
-/* Ajustar estilos adicionales según tus preferencias *//*# sourceMappingURL=style.css.map */
+.titulo-info {
+  text-align: center;
+  font-size: 30px;
+}
+
+.table1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(248, 243, 243);
+  border: 2px solid black;
+  background-color: #ccc;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  background-color: #ccc;
+}/*# sourceMappingURL=style.css.map */

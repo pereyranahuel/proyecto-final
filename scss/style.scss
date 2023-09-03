@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-$color-principal: rgb(193, 216, 247);
+$color-principal: #F5F5F5;
 $font-family: 'Arial', sans-serif;
 $font-size-heading: 25px;
 $margin-small: 10px;
@@ -16,12 +16,12 @@ $margin-small: 10px;
     padding: $padding;
   }
   
-@import"_index";
+@import"index";
 
-@import "_contacto";
+@import "contacto";
 
-@import "_productos";
+@import "productos";
 
-@import "_nosotros";
+@import "nosotros";
 
-@import "_informacion";
+@import "informacion";
