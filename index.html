@@ -9,8 +9,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
         <link rel="stylesheet" href="./scss/style.css" />
+        <script defer src="./pages/js/terceraentre.js"></script>
         <title>Mas rack🦾</title>
     </head>
+
     <body>
         <header>
             <nav class="navbar navbar-expand-lg colornav">
@@ -43,11 +45,51 @@
                         <img class="logo" src="./public/imagenes-de-index/logo-dos.png" alt="logo rack" />
                         <h1>MAS RACK</h1>
                         <h2>venta de rack industriales</h2>
+                        <button id="mostrarUsuario" type="button">Mi Usuario</button>
+                        <button id="crearUsuario" type="button">Crear Usuario</button>
                     </div>
                 </div>
             </div>
         </header>
         <main>
+            <div id="miUsuarioForm" style="display: none">
+                <form id="usuarioForm">
+                    <label for="nombreUsuario">Nombre de usuario:</label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" required />
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required />
+
+                    <button type="button" id="ingresarUsuario">Ingresar</button>
+                </form>
+            </div>
+            <div id="crearUsuarioForm" style="display: none">
+                <form id="nuevoUsuarioForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required />
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required />
+
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required />
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required />
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required />
+
+                    <label for="crearContrasena">Crear contraseña:</label>
+                    <input type="password" id="crearContrasena" name="crearContrasena" required />
+
+                    <label for="confirmarContrasena">Confirmar contraseña:</label>
+                    <input type="password" id="confirmarContrasena" name="confirmarContrasena" required />
+                    
+            <button type="button" id="crearNuevoUsuario">Crear Usuario</button>
+                </form>
+            </div>
+
             <p class="intro-index">Mas rack es una de las compañías líderes en tecnología intralogística a nivel mundial. Es puntera en automatización de almacenes y desarrollo de software. Sus estanterías metálicas son además sinónimo de calidad en la industria.</p>
             <div class="contenedor">
                 <div id="carouselExample" class="carousel slide">
@@ -116,5 +158,8 @@
         <script>
             AOS.init();
         </script>
+
+        <script defer src="./pages/js/tu-script.js"></script>
+        <!-- Agrega el nombre correcto de tu script personalizado -->
     </body>
 </html>
