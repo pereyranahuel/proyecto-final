@@ -466,15 +466,11 @@ footer {
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
   background-color: #ccc;
-}/*# sourceMappingURL=style.css.map */
-.formulario {
-  display: none;
 }
-
 .boton-comprar {
-  border: 2px solid #3498db; /* Color del borde */
+  border: 2px solid #5f30eb; /* /* Color del borde */
   padding: 10px 20px; /* Ajusta el relleno según sea necesario */
- background-color: aquamarine;
+  background-color: #0b98f5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -497,8 +493,8 @@ footer {
 /* Estilo para los botones de Pagar y Vaciar Carrito */
 #pagar-button,
 #vaciar-carrito-button {
-    border: 2px solid #27ae60; /* Color del borde */
-   background-color: #0b98f5;
+  border: 2px solid #5f30eb; /* Color del borde */
+  background-color: #0b98f5;
     padding: 10px 20px; /* Ajusta el relleno según sea necesario */
     text-align: center;
     text-decoration: none;
@@ -515,7 +511,7 @@ footer {
 
 #pagar-button:hover,
 #vaciar-carrito-button:hover {
-    background-color: #27ae60; /* Nuevo color de fondo al pasar el mouse */
+    background-color: #2004f3; /* Nuevo color de fondo al pasar el mouse */
     color: #fff; /* Cambiar el color del texto para que sea legible en el nuevo fondo */
 }
 /* Estilos para los formularios */
@@ -539,19 +535,92 @@ input {
   margin-bottom: 16px;
   box-sizing: border-box;
 }
-
-button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px;
-  margin: 4px;
+/* Estilo para el botón mostrarUsuario */
+#mostrarUsuario {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 10px;
+}
+
+#mostrarUsuario:hover {
+  background-color: #008CBA;
+}
+
+/* Estilo para el botón crearUsuario */
+#crearUsuario {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#crearUsuario:hover {
+  background-color: #0073a8;
 }
 
 /* Estilos específicos para el formulario de creación de usuario */
 #crearUsuarioForm {
   display: none; /* Ocultar por defecto */
 }
+button {
+  background-color: #f20404;
+  color: #fff;
+  padding: 5px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Estilo para los botones */
+#crearNuevoUsuario, #ingresarUsuario {
+  background-color: #4CAF50; /* Color de fondo verde para el botón crearNuevoUsuario */
+  color: white; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de puntero al pasar el ratón */
+  margin-right: 10px; /* Margen a la derecha para separar los botones */
+}
 
+/* Estilo para los botones al pasar el ratón */
+#crearNuevoUsuario:hover, #ingresarUsuario:hover {
+  background-color: #45a049; /* Cambiar el color de fondo al pasar el ratón */
+}
+button[type="submit"] {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agregando una transición para suavizar el cambio de color */
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+#nuevoUsuarioForm {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px;
+  max-width: 500px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: auto;
+}
+
+#nuevoUsuarioForm label {
+  align-self: center;
+}
+
+#nuevoUsuarioForm input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
